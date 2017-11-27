@@ -1,17 +1,25 @@
 <template>
-  <v-card flat>
-    <v-card-media height = '500px' src = '/img/index-head.png'>
-    </v-card-media>
-  </v-card>
-
-  <v-card flat class = "ma-2">
-
+  <v-card flat key = "card1">
+    <v-parallax src="/img/index-head.png">
+      <v-layout column align-center justify-center>
+        <h1 class="primary--text use-font">Racing off to Launceston for the 2018 National Finals</h1>
+        <h3 class="primary--text use-font">Best Manufactured Car and Fastest Lap at the NSW State Finals</h4>
+      </v-layout>
+    </v-parallax>
   </v-card>
 </template>
 <script>
   export default{
-    layout: "nav"
+    layout: "nav",
+    data(){
+      return{
+        name: "Blaze Racing"
+      }
+    },
+    head(){
+      return{
+        title: this.name
+      }
+    }
   }
 </script>
-<style scoped>
-</style>

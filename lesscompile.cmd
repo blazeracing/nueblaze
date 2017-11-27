@@ -1,1 +1,1 @@
-less-watch-compiler assets/less static/css
+less-watch-compiler assets/less assets/css
